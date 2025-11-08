@@ -1,4 +1,4 @@
-#version: '3.8'
+version: '3.8'
 services:
   nginx:
     build:
@@ -7,7 +7,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./app:/var/www/html/public/html
+      - ./php/app:/var/www/html/public/html
     depends_on:
       - php
 
@@ -15,9 +15,8 @@ services:
     build:
       context: ./php
       dockerfile: dockerfile
-    volumes:
-      - ./app:/var/www/html/public/html
-
+#    volumes:
+#      - ./app:/var/www/html/public/html
 
 networks:
   default:
