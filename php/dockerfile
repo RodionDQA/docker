@@ -1,3 +1,4 @@
-FROM php:8.2-fpm
+#FROM php:8.2-fpm
+FROM php:8.3-fpm-alpine
 WORKDIR /var/www/html/public/html
 COPY app/index.php /var/www/html/public/html/

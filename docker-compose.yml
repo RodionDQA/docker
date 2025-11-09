@@ -15,8 +15,6 @@ services:
     build:
       context: ./php
       dockerfile: dockerfile
-#    volumes:
-#      - ./app:/var/www/html/public/html
 
 networks:
   default:
